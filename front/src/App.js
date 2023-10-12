@@ -19,7 +19,7 @@ import SubscribedUserPost from "./components/screens/SubscribeUserPost"
 import {Posts} from "./components/screens/Posts"
 import {Profile1} from "./components/screens/Profile1"
 import { About } from "./components/screens/About";
-import { ComplexNavbar } from './components/Navbar3';
+
 import ExampleNavbar from './components/Navbar5';
 
 

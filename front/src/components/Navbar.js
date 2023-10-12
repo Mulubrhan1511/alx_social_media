@@ -25,7 +25,7 @@ const NavBar = () => {
       <MDBContainer fluid>
         <MDBNavbarBrand className="text-white" href='#'>
         <Link to={user ? "/" : "/signin"} className="text-white"> 
-        <img src={require('../images/blue-icon-small.ico')} height={60} width={60} alt="Calu Logo" className="w-16" />
+        <img src="" height={60} width={60} alt="Calu Logo" className="w-16" />
         
         
         </Link>
