@@ -1,0 +1,28 @@
+.mobile-collapse {
+    @media (max-width: 991.98px) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background-color: rgba(0, 0, 255, 0.5); /* Blue background color for mobile collapse */
+      opacity: 1; /* Make it opaque */
+    }
+  }
+  
+  .blue-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.5); /* Blue background color */
+    z-index: 999;
+  }
+  
+  .mobile-collapse-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
