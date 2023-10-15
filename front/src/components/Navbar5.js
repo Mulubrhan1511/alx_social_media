@@ -20,6 +20,8 @@ const navigation =
   [
     { name: 'Home', href: '/signin', current: false },
   { name: 'About', href: '/signin', current: false },
+  { name: 'Sigin', href: '/signin1', current: false },
+  { name: 'Sigup', href: '/signup1', current: false },
   ]
   
   

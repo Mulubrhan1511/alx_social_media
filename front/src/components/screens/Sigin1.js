@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import M from "materialize-css";
 import {UserContext} from "../../App"
 
-export const SignIn = () => {
+export const Sigin1 = () => {
   const {state,dispatch} = useContext(UserContext)
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
@@ -69,7 +69,7 @@ export const SignIn = () => {
                   </div>
                   <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-primary-800" onClick={()=>PostData()}>Sign in</button>
                   <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Don’t have an account yet? <a href="/signup" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                      Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
                   </p>
               
           </div>

@@ -3,7 +3,7 @@ import NavBar from "./components/Navbar";
 import "./App.css"
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./components/screens/Home";
-import Signin from "./components/screens/Signin";
+import {SignIn} from "./components/screens/Signin";
 import Profile from "./components/screens/Profile";
 import Signup from "./components/screens/Signup";
 import CreatePost from "./components/screens/CreatePost";
@@ -19,6 +19,8 @@ import SubscribedUserPost from "./components/screens/SubscribeUserPost"
 import {Posts} from "./components/screens/Posts"
 import {Profile1} from "./components/screens/Profile1"
 import { About } from "./components/screens/About";
+import { Sigin1 } from "./components/screens/Sigin1";
+import { Signup1 } from "./components/screens/Signup1";
 
 import ExampleNavbar from './components/Navbar5';
 
@@ -44,8 +46,10 @@ function App() {
 <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/posts" element={<Posts />} />
-          <Route path="/signin" element={<Signin />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signin1" element={<Sigin1 />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/signup1" element={<Signup1 />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/profile1" element={<Profile1 />} />
           <Route path="/create" element={<CreatePost />} />
