@@ -2,11 +2,10 @@ import React,{createContext, useContext,useEffect,useReducer} from "react";
 import NavBar from "./components/Navbar";
 import "./App.css"
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
-import { Home } from "./components/screens/Home";
-import {Home1} from "./components/screens/Home1";
+import Home from "./components/screens/Home";
 import {SignIn} from "./components/screens/Signin";
 import Profile from "./components/screens/Profile";
-import {SignUp}  from "./components/screens/Signup";
+import { SignUp } from "./components/screens/Signup";
 import CreatePost from "./components/screens/CreatePost";
 import {Create} from "./components/screens/Create";
 import {reducer,initialState} from "./reducers/userReducer"
@@ -22,7 +21,6 @@ import {Profile1} from "./components/screens/Profile1"
 import { About } from "./components/screens/About";
 import { Sigin1 } from "./components/screens/Sigin1";
 import { Signup1 } from "./components/screens/Signup1";
-import {Fotter} from "./components/Fotter"
 
 
 import ExampleNavbar from './components/Navbar5';
@@ -61,7 +59,6 @@ function App() {
           <Route path="/createpost" element={<Create />} />
           
           <Route path="/messsage1" element={<UserMessage1 />} />
-          <Route path="/ho" element={<Home1 />} />
           <Route path="/editprofile" element={<EditProfile />} />
           <Route path="/message1/:userId" element={<UserMessage />} />
           
