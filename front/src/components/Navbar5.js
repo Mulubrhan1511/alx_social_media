@@ -13,13 +13,13 @@ const navigation =
   { name: 'Message', href: '/messsage1', current: false },
   { name: 'Upload', href: '/createpost', current: false },
   { name: 'About', href: '/about', current: false },
-  { name: 'Posts', href: '/posts', current: false },
   { name: 'Profile', href: '/profile1', current: false },
   ]
   : 
   [
-    { name: 'Home', href: '/signin', current: false },
-  { name: 'About', href: '/signin', current: false },
+    { name: 'Home', href: '/ho', current: false },
+  { name: 'About', href: '/aboutl', current: false },
+  
   ]
   
   
@@ -59,19 +59,21 @@ export default function Example() {
                 </Disclosure.Button>
               </div>
               <div className="hidden md:ml-6 md:block">
+              <a href={user ? "/" : "/ho"}>
                   <img
                     className="h-8 w-auto"
                     src="https://res.cloudinary.com/dhw1mueq4/image/upload/v1696845956/Screenshot_from_2023-10-09_13-05-26_xp1sjw.png"
                     alt="Your Company"
                   />
+                  </a>
                 </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:items-center">
               <div className="lg:hidden lg:flex lg:items-center">
-                  <img
+                  <a href={user ? "/" : "/ho"}><img
                     className="h-8 w-auto"
                     src="https://res.cloudinary.com/dhw1mueq4/image/upload/v1696845956/Screenshot_from_2023-10-09_13-05-26_xp1sjw.png"
                     alt="Your Company"
-                  />
+                  /></a>
                 </div>
                 <div className="hidden sm:ml-6 sm:block flex items-center sm:justify-center">
                   <div className="flex space-x-4">
@@ -135,7 +137,7 @@ export default function Example() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="/profile"
+                            href="/profile1"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Your Profile
@@ -145,10 +147,10 @@ export default function Example() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="/profile"
+                            href="/editprofile"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Settings
+                            EditProfile 
                           </a>
                         )}
                       </Menu.Item>

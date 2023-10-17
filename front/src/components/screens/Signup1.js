@@ -2,7 +2,7 @@ import React, { useState, useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import M from "materialize-css";
 import { Colors } from "./toast";
-export const SignUp = () => {
+export const Signup1 = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -206,16 +206,15 @@ export const SignUp = () => {
                         <label for="terms" class="font-light text-gray-500 dark:text-gray-300">I accept the <a class="font-medium text-primary-600 hover:underline dark:text-primary-500" href="#">Terms and Conditions</a></label>
                       </div>
                   </div>
-                  <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={() => PostData()}>Create an account</button>
+                  <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"  onClick={() => PostData()}>Create an account</button>
                   <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Already have an account? <a href="/signin" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</a>
+                      Already have an account? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</a>
                   </p>
              
           </div>
       </div>
-      
   </div>
- 
+  
 </section>
     </div>
   )
