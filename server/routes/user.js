@@ -67,4 +67,14 @@ router.put('/updatepic', requireLogin, (req, res) => {
     });
 });
 
+router.put('/editprofile', requireLogin, (req, res) => {
+  User.findByIdAndUpdate(req.user._id, { $set: {name: req.body.name, fullname: req.body.fullname, email: req.body.email, location: req.body.location, gender: req.body.gender, cohort: req.body.cohort  } }, { new: true })
+    .then(result => {
+      res.json(result);
+    })
+    .catch(err => {
+      res.status(422).json({ error: "Failed to update profile picture" });
+    });
+});
+
 module.exports = router;

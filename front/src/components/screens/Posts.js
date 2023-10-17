@@ -119,6 +119,7 @@ export const Posts = () => {
     {
         data.map(item=>{
     return (
+      <>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
       <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <a href={item.postedBy._id !== user._id ? '/profile1/' + item.postedBy._id : '/profile1/'} className="flex items-center">
@@ -210,7 +211,11 @@ export const Posts = () => {
                             
         </div>
       </div>
+    
+    
     </div>
+    <br></br>
+    </>
     )
          })
         }
