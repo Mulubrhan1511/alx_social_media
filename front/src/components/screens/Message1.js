@@ -133,23 +133,16 @@ const UserMessage1 = () => {
           />
         </div>
         <div class="text-sm font-semibold mt-2">{user.name}</div>
-        <div class="text-xs text-gray-500">Lead UI/UX Designer</div>
+        <div class="text-xs text-gray-500">ALX Software Enginnering</div>
         <div class="flex flex-row items-center mt-3">
-          <div
-            class="flex flex-col justify-center h-4 w-8 bg-indigo-500 rounded-full"
-          >
-            <div class="h-3 w-3 bg-white rounded-full self-end mr-1"></div>
-          </div>
-          <div class="leading-none ml-1 text-xs">Active</div>
+          
+          
         </div>
       </div>
       <div class="flex flex-col mt-8">
         <div class="flex flex-row items-center justify-between text-xs">
-          <span class="font-bold">Active Conversations</span>
-          <span
-            class="flex items-center justify-center bg-gray-300 h-4 w-4 rounded-full"
-            >4</span
-          >
+          
+          
         </div>
         <div class="flex flex-col space-y-1 mt-4 -mx-2 h-48 overflow-y-auto">
         {followers.map((follower) =>
@@ -168,11 +161,7 @@ const UserMessage1 = () => {
                     />
             </div>
             <div class="ml-2 text-sm font-semibold">{follower.name}</div>
-            <div
-              class="flex items-center justify-center ml-auto text-xs text-white bg-red-500 h-4 w-4 rounded leading-none"
-            >
-              2
-            </div>
+           
           </button>
           
           ) : null
@@ -184,12 +173,28 @@ const UserMessage1 = () => {
       
     </div>
     <div class="flex flex-col flex-auto h-full p-6">
+    <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 w-full p-4" style={{ height: '50px' }}>
+  <div className="flex items-center h-full">
+    <img
+      src={selectedFollower.pic}
+      alt="avatar"
+      className="mr-2"
+      style={{ width: '40px', height: '40px', borderRadius: '40px' }}
+    />
+    <h6 className="text-left flex-grow">{selectedFollower.name}</h6>
+  </div>
+</div>
       <div
-        class="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4"
+        class="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-blue-300 h-full p-4"
       >
+         
         <div class="flex flex-col h-full overflow-x-auto mb-4">
+          
           <div class="flex flex-col h-full">
+            
+           
             <div class="grid grid-cols-12 gap-y-2">
+              
             {messages.map((message) =>
                 message.recipient._id === selectedFollower._id || message.sender._id === selectedFollower._id ? (
                   message.sender._id==user._id?(
@@ -209,7 +214,7 @@ const UserMessage1 = () => {
                   <div
                     class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
                   >
-                    <div>{message.content}</div>
+                    <div>{message.content} </div>
                   </div>
                 </div>
               </div>
@@ -343,24 +348,15 @@ const UserMessage1 = () => {
           />
         </div>
         <div class="text-sm font-semibold mt-2">{user.name}</div>
-        <div class="text-xs text-gray-500">Lead UI/UX Designer</div>
+        <div class="text-xs text-gray-500">ALX Software Enginnering</div>
         <div class="flex flex-row items-center mt-3">
-          <div
-            class="flex flex-col justify-center h-4 w-8 bg-indigo-500 rounded-full"
-          >
-            <div class="h-3 w-3 bg-white rounded-full self-end mr-1"></div>
-          </div>
-          <div class="leading-none ml-1 text-xs">Active</div>
+         
+          
         </div>
       </div>
       <div class="flex flex-col mt-8">
-        <div class="flex flex-row items-center justify-between text-xs">
-          <span class="font-bold">Active Conversations</span>
-          <span
-            class="flex items-center justify-center bg-gray-300 h-4 w-4 rounded-full"
-            >4</span
-          >
-        </div>
+        
+        
         <div class="flex flex-col space-y-1 mt-4 -mx-2 h-48 overflow-y-auto">
         {followers.map((follower) =>
             messages.some((message) => message.sender._id === follower._id || message.recipient._id === follower._id) ? (
@@ -378,11 +374,7 @@ const UserMessage1 = () => {
                     />
             </div>
             <div class="ml-2 text-sm font-semibold">{follower.name}</div>
-            <div
-              class="flex items-center justify-center ml-auto text-xs text-white bg-red-500 h-4 w-4 rounded leading-none"
-            >
-              2
-            </div>
+            
           </button>
           
           ) : null

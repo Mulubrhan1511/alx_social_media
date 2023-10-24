@@ -157,7 +157,7 @@ export const UserProfile1 = () => {
             </div>
             <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
               <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
-              Los Angeles, California
+              {userProfile.user.location ? userProfile.user.location : "Not Avalable"}
             </div>
            
             <div class="mb-2 text-blueGray-600">
@@ -168,13 +168,9 @@ export const UserProfile1 = () => {
             <div class="flex flex-wrap justify-center">
               <div class="w-full lg:w-9/12 px-4">
                 <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
-                  An artist of considerable range, Jenna the name taken by
-                  Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                  performs and records all of his own music, giving it a
-                  warm, intimate feel with a solid groove structure. An
-                  artist of considerable range.
+                {userProfile.user.bio ? userProfile.user.bio : ""}
                 </p>
-                <a href="#pablo" class="font-normal text-pink-500">Show more</a>
+                
               </div>
             </div>
           </div>

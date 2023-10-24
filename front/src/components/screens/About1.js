@@ -10,7 +10,7 @@ export const AboutL = () => {
             </h1>
 
             <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
-                We are a team of two second-year BSE students from ALU, passionate about coding and constantly seeking
+            We are a team of two ALX Software Enginnering Students, passionate about coding and constantly seeking
                 improvement. Excited about this project, we hope you enjoy it and appreciate your support.
             </p>
 
@@ -65,7 +65,7 @@ export const AboutL = () => {
                 <div
                     class="flex flex-col items-center p-8 transition-colors duration-300 transform cursor-pointer rounded-xl hover:border-transparent group hover:bg-sky-600 dark:border-gray-700 dark:hover:border-transparent">
                     <img class="object-cover w-64 h-64 rounded-full ring-4 ring-gray-300"
-                        src="/src/frontend/static/img/gggg.jpg" alt="Team" />
+                        src="https://res-console.cloudinary.com/dhw1mueq4/thumbnails/transform/v1/image/upload/Yl9hdXRvOnByZWRvbWluYW50LGNfcGFkLGhfMzAwLHdfMzAwLGZfanBnLGZsX2xvc3N5LmFueV9mb3JtYXQucHJlc2VydmVfdHJhbnNwYXJlbmN5LnByb2dyZXNzaXZl/v1/cGhvdG9fMjAyMy0xMC0xOV8xNS0wNy0yMF9yZndiY3E=/template_primary" alt="Team" />
 
                     <h1
                         class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">

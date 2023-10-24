@@ -49,6 +49,7 @@ const UserMessage = () => {
           .then(res => res.json())
           .then(result => {
             console.log(result);
+            console.log("user")
             setProfile(result);
             console.log(result)
           });
@@ -201,6 +202,7 @@ const UserMessage = () => {
         
          <div class="flex flex-col h-full overflow-x-auto mb-4">
            <div class="flex flex-col h-full">
+           
              <div class="grid grid-cols-12 gap-y-2">
              {messages.map((message) =>
                  message.recipient._id === selectedFollower._id || message.sender._id === selectedFollower._id ? (
@@ -411,11 +413,24 @@ const UserMessage = () => {
       
     </div>
     <div class="flex flex-col flex-auto h-full p-6">
+    <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 w-full p-4" style={{ height: '50px' }}>
+  <div className="flex items-center h-full">
+    <img
+      src={userProfile.user.pic}
+      alt="avatar"
+      className="mr-2"
+      style={{ width: '40px', height: '40px', borderRadius: '40px' }}
+    />
+    <h6 className="text-left flex-grow">{userProfile.user.name}</h6>
+  </div>
+</div>
       <div
-        class="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4"
+        class="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-blue-300 h-full p-4"
       >
         <div class="flex flex-col h-full overflow-x-auto mb-4">
+          
           <div class="flex flex-col h-full">
+         
             <div class="grid grid-cols-12 gap-y-2">
             {messages.map((message) =>
                 message.recipient._id === userProfile.user._id || message.sender._id === userProfile.user._id ? (

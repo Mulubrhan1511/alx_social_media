@@ -8,39 +8,70 @@ const {JWT_SECRET} = require('../keys')
 const requireLogin = require('../middleware/requireLogin')
 
 
-router.post('/signup',(req,res)=>{
-    const {name,email,password,pic} = req.body
-    if (!email || !password || !name){
-        return res.status(422).json({error:"please add all the filelds"})
-    }
-    User.findOne({email:email})
-    .then((savedUser)=>{
-        if(savedUser){
-            return res.status(422).json({error:"User alredy exist"})
-        }
-        bcrypt.hash(password,12)
-        .then(hashedpassword=>{
-            //saving hashed passowrd in database
-            const user = new User({
-                name,
-                email,
-                password:hashedpassword,
-                pic
+const nodemailer = require('nodemailer');
+
+// ...
+
+router.post('/signup', (req, res) => {
+  const { name, email, password, pic } = req.body;
+
+  if (!email || !password || !name) {
+    return res.status(422).json({ error: "Please add all the fields" });
+  }
+
+  User.findOne({ email: email })
+    .then((savedUser) => {
+      if (savedUser) {
+        return res.status(422).json({ error: "User already exists" });
+      }
+
+      bcrypt.hash(password, 12)
+        .then((hashedPassword) => {
+          const user = new User({
+            name,
+            email,
+            password: hashedPassword,
+            pic
+          });
+
+          user.save()
+            .then((user) => {
+              // Create a transporter for sending emails (SMTP details required)
+              const transporter = nodemailer.createTransport({
+                service: 'Gmail',
+                auth: {
+                  user: 'mulubrhangeberkidan@gmail.com',
+                  pass: 'Mul@1511'
+                }
+              });
+              // Email content
+              const mailOptions = {
+                
+                to: email,
+                subject: 'Welcome to Your Website',
+                text: `Dear ${name},\n\nThank you for registering on our website. We're excited to have you as a member!\n\nBest regards,\nYour Website Team`
+              };
+
+              // Send the email
+              transporter.sendMail(mailOptions, (error, info) => {
+                if (error) {
+                  console.log(error);
+                } else {
+                  console.log('Email sent: ' + info.response);
+                }
+              });
+
+              res.json({ message: "Saved successfully" });
             })
-            user.save()
-            .then(user=>{
-                res.json({message:"saved succfuly"})
-            })
-            .catch(err=>{
-                console.log(err)
-            })
-        })
-        
+            .catch((err) => {
+              console.log(err);
+            });
+        });
     })
-    .catch(err=>{
-        console.log(err)
-    })
-})
+    .catch((err) => {
+      console.log(err);
+    });
+});
 router.post('/signin',(req,res)=>{
     const {email,password} = req.body
     if (!email || !password){
