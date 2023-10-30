@@ -77,5 +77,13 @@ router.put('/editprofile', requireLogin, (req, res) => {
     });
 });
 
+router.post('/serach-users',(req,res)=>{
+  let userPattern = new RegExp("^"+req.body.query)
+  User.find({email:{$regex:userPattern}})
+  .then(user=>{
+    res.json({user})
+  })
+})
+
 module.exports = router;
 

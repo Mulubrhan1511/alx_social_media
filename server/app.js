@@ -24,12 +24,15 @@ mongoose.connection.on('error',(err)=>{
 require('./models/user')
 require('./models/post')
 require('./models/message')
+require('./models/group')
 
 app.use(express.json())
 app.use(require('./routes/auth'))
 app.use(require('./routes/post'))
 app.use(require('./routes/user'))
 app.use(require('./routes/message'))
+app.use(require('./routes/group'))
+
 
 
 app.listen(PORT,()=>{
