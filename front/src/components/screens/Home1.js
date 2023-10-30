@@ -50,7 +50,7 @@ export const Home1 = () => {
               <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-gray-900">Posts & Events</h1>
 
               <p class="mt-3 text-gray-500 dark:text-gray-800">
-              ALX Social Media serves as a central hub for diverse clubs at ALU, empowering students to have a vibrant and fulfilling extracurricular journey at ALX.
+              ALX Social Media serves as a central hub for diverse clubs at ALX, empowering students to have a vibrant and fulfilling extracurricular journey at ALX.
               </p>
             </div>
           </div>
@@ -88,7 +88,7 @@ export const Home1 = () => {
             </span>
 
             <div class="mt-4 md:mx-4 md:mt-0">
-              <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-gray-900"> Made by ALU for ALU </h1>
+              <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-gray-900"> Made by ALX for ALX </h1>
 
               <p class="mt-3 text-gray-500 dark:text-gray-800">
               ALX Social Media is proudly made by ALX for ALX. Our platform was created with the sole purpose of catering to the unique needs and interests of the ALX community. Developed by a team of ALX students and alumni, we understand the importance of fostering a thriving online environment where ALX members can connect, collaborate, and showcase their talents. With ALX Social Media, you'll experience a platform designed specifically for you, offering a range of features tailored to enhance your ALX journey. Join us today and discover a vibrant community built by and for ALX

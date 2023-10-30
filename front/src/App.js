@@ -22,7 +22,7 @@ import {Profile1} from "./components/screens/Profile1"
 import { About } from "./components/screens/About";
 import { Sigin1 } from "./components/screens/Sigin1";
 import { Signup1 } from "./components/screens/Signup1";
-import {Fotter} from "./components/Fotter"
+
 
 
 import ExampleNavbar from './components/Navbar5';
@@ -66,9 +66,11 @@ function App() {
           <Route path="/message1/:userId" element={<UserMessage />} />
           
           <Route path="/about" element={<About />} />
+         
           <Route path="/aboutl" element={<AboutL />} />
           <Route path="/profile/:userid" element={<UserProfile />} />
           <Route path="/profile1/:userid" element={<UserProfile1 />} />
+          
           <Route path="/myfollowerspost" element={<SubscribedUserPost />} />
     </Routes>
 </div>
