@@ -20,8 +20,6 @@ import SubscribedUserPost from "./components/screens/SubscribeUserPost"
 import {Posts} from "./components/screens/Posts"
 import {Profile1} from "./components/screens/Profile1"
 import { About } from "./components/screens/About";
-import { Sigin1 } from "./components/screens/Sigin1";
-import { Signup1 } from "./components/screens/Signup1";
 
 
 
@@ -51,9 +49,9 @@ function App() {
          
           <Route exact path="/posts" element={<Posts />} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/signin1" element={<Sigin1 />} />
+          
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/signup1" element={<Signup1 />} />
+          
           
           <Route path="/profile" element={<Profile />} />
           <Route path="/profile1" element={<Profile1 />} />
